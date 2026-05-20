@@ -17,6 +17,7 @@
       "check_dependency_tree_detection_status": true,
       "check_update_request_sca_results": true,
 
+      "check_system_paths": true,
       "expected_total_dependencies_number": {"gte": 3},
       "expected_direct_dependencies_number": {"eq": 2},
       "expected_transitive_dependencies_number": {"gte": 1},
