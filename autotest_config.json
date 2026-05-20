@@ -1,0 +1,35 @@
+{
+  "repoUrl": "https://github.com/mend-detection-qa/poetry-single-int-version-whl",
+  "tests": [
+    {
+      "check_name": "direct_dependencies_count",
+      "check_type": "FLEXIBLE",
+      "expected_value": 2,
+      "description": "Direct deps: pdfminer.six + chardet"
+    },
+    {
+      "check_name": "direct_dependencies_names_list",
+      "check_type": "STRICT",
+      "expected_value": ["pdfminer-six", "chardet"],
+      "description": "pdfminer.six must appear — SCA-5540 regression guard for direct-dep path (calendar version)"
+    },
+    {
+      "check_name": "check_sha1_not_empty",
+      "check_type": "STRICT",
+      "expected_value": true,
+      "description": "sha1 must be populated; empty sha1 = versionPatternWhl regex miss on calver"
+    },
+    {
+      "check_name": "transitive_dependencies_names_list",
+      "check_type": "FLEXIBLE",
+      "expected_value": ["cryptography"],
+      "description": "cryptography is a transitive dep of pdfminer.six"
+    },
+    {
+      "check_name": "update_request_sca_results_no_error",
+      "check_type": "STRICT",
+      "expected_value": true,
+      "description": "No ERROR-level SCA results from the resolver"
+    }
+  ]
+}
