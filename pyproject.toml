@@ -9,7 +9,7 @@ python = "^3.10"
 # pdfminer.six ships as pdfminer.six-20251230-py3-none-any.whl
 # This exercises the DIRECT dep resolver path (vs transitive via pdfplumber in poetry_calendar_version_whl)
 "pdfminer.six" = "20251230"
-chardet = "^5.2"
+chardet = "5.2.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
