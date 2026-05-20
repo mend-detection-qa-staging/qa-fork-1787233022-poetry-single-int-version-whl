@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "poetry-single-int-version"
+version = "0.1.0"
+description = "SCA-5540 regression: direct dep with calendar-versioned whl (pdfminer.six==20251230)"
+authors = ["mend-detection-qa"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+# pdfminer.six ships as pdfminer.six-20251230-py3-none-any.whl
+# This exercises the DIRECT dep resolver path (vs transitive via pdfplumber in poetry_calendar_version_whl)
+"pdfminer.six" = "20251230"
+chardet = "^5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
