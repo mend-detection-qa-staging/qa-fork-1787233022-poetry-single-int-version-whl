@@ -23,7 +23,7 @@
       "expected_transitive_dependencies_number": {"gte": 1},
 
       "direct_dependencies_names_list": {
-        "contains": ["pdfminer-six", "chardet"]
+        "contains": ["pdfminer_six-20251230-py3-none-any.whl", "chardet-5.2.0-py3-none-any.whl"]
       },
       "transitive_dependencies_names_list": {
         "contains": ["cryptography"]
